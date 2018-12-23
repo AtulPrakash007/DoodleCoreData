@@ -79,7 +79,6 @@
                     <constraint firstItem="6mj-E2-z2p" firstAttribute="leading" secondItem="TbT-8m-DBV" secondAttribute="trailing" constant="8" id="IsD-1B-4GW"/>
                     <constraint firstItem="t5c-ke-KBc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="UqG-ln-Y3c"/>
                     <constraint firstAttribute="trailingMargin" secondItem="t5c-ke-KBc" secondAttribute="trailing" constant="88" id="XlZ-QO-WRy"/>
-                    <constraint firstItem="TbT-8m-DBV" firstAttribute="leading" secondItem="t5c-ke-KBc" secondAttribute="trailing" constant="20" id="yfU-Th-ane"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

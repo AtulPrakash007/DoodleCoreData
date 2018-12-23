@@ -16,6 +16,7 @@
 		047BAF1D21CE74E200EAE1F7 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047BAF1B21CE74E200EAE1F7 /* UserTableViewCell.xib */; };
 		047BAF2021CE7DCB00EAE1F7 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BAF1F21CE7DCB00EAE1F7 /* RoundButton.swift */; };
 		047BAF2221CE7F8E00EAE1F7 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BAF2121CE7F8E00EAE1F7 /* ViewExtension.swift */; };
+		047BAF2521CF4AB100EAE1F7 /* DoodleCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 047BAF2321CF4A5800EAE1F7 /* DoodleCoreData.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,9 +64,9 @@
 		047BAEFF21CDF2C500EAE1F7 /* DoodleCoreData */ = {
 			isa = PBXGroup;
 			children = (
+				047BAF2621CF596900EAE1F7 /* Controller */,
 				047BAF1521CE744E00EAE1F7 /* View */,
 				047BAF0021CDF2C500EAE1F7 /* AppDelegate.swift */,
-				047BAF0221CDF2C500EAE1F7 /* ViewController.swift */,
 				047BAF0421CDF2C500EAE1F7 /* Main.storyboard */,
 				047BAF0A21CDF2C600EAE1F7 /* Assets.xcassets */,
 				047BAF0C21CDF2C600EAE1F7 /* LaunchScreen.storyboard */,
@@ -92,6 +93,14 @@
 				047BAF2121CE7F8E00EAE1F7 /* ViewExtension.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		047BAF2621CF596900EAE1F7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				047BAF0221CDF2C500EAE1F7 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +181,7 @@
 				047BAF2021CE7DCB00EAE1F7 /* RoundButton.swift in Sources */,
 				047BAF0321CDF2C500EAE1F7 /* ViewController.swift in Sources */,
 				047BAF0121CDF2C500EAE1F7 /* AppDelegate.swift in Sources */,
+				047BAF2521CF4AB100EAE1F7 /* DoodleCoreData.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

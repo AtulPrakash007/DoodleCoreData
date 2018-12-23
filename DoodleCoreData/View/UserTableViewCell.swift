@@ -9,7 +9,7 @@
 import UIKit
 
 protocol UserTableDelegate: class {
-    func cellBtnAction(for isFamily: Bool, at index: Int)
+    func cellBtnAction(for family: Bool, of id: Int)
 }
 
 class UserTableViewCell: UITableViewCell {
@@ -32,11 +32,11 @@ class UserTableViewCell: UITableViewCell {
     }
     
     @IBAction func addAction(_ sender: UIButton) {
-        delegate?.cellBtnAction(for: false, at: sender.tag)
+        delegate?.cellBtnAction(for: false, of: sender.tag)
     }
     
     @IBAction func familyAction(_ sender: UIButton) {
-        delegate?.cellBtnAction(for: true, at: sender.tag)
+        delegate?.cellBtnAction(for: true, of: sender.tag)
     }
     
     

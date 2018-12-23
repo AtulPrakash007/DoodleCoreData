@@ -18,49 +18,25 @@ class ViewController: UIViewController {
     let nameArr = ["Atul Prakash", "Deepak Kumar", "Vasudevan S", "Malvirajan", "SatheeshKumar K"]
     var users: [Users] = []
     
-    var fetchedResultsController: NSFetchedResultsController<Task>
+    var fetchedResultsController: NSFetchedResultsController<Users>
     {
-        // If the variable is already initialized we return that instance.
         if _fetchedResultsController != nil {
             return _fetchedResultsController!
         }
+
+        let fetchRequest: NSFetchRequest<Users> = Users.fetchRequest()
         
-        // If not, lets build the required elements for the fetched
-        // results controller.
-        
-        // First we need to create a fetch request with the pretended type.
-        let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
-        
-        // Set the batch size to a suitable number (optional).
-        fetchRequest.fetchBatchSize = 20
-        
-        // Create at least one sort order attribute and type (ascending\descending)
-        let sortDescriptor = NSSortDescriptor(key: "name", ascending: false)
-        
-        // Set the sort objects to the fetch request.
+        let sortDescriptor = NSSortDescriptor(key: "id", ascending: false)
         fetchRequest.sortDescriptors = [sortDescriptor]
+        fetchRequest.fetchLimit = 1 //fetch last object
+//        fetchRequest.fetchBatchSize = 60
         
-        // Optionally, let's create a filter\predicate.
-        // The goal of this predicate is to fetch Tasks that are not yet completed.
-        let predicate = NSPredicate(format: "completed == FALSE")
-        
-        // Set the created predicate to our fetch request.
-        fetchRequest.predicate = predicate
-        
-        // Create the fetched results controller instance with the defined attributes.
-        let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext!, sectionNameKeyPath: nil, cacheName: nil)
-        
-        // Set the delegate of the fetched results controller to the view controller.
-        // with this we will get notified whenever occurs changes on the data.
+        let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.context, sectionNameKeyPath: nil, cacheName: nil)
         aFetchedResultsController.delegate = self
         
-        // Setting the created instance to the view controller instance.
         _fetchedResultsController = aFetchedResultsController
         
         do {
-            // Perform the initial fetch to Core Data.
-            // After this step, the fetched results controller
-            // will only retrieve more records if necessary.
             try _fetchedResultsController!.performFetch()
         } catch {
             let nserror = error as NSError
@@ -74,8 +50,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         registerTableViewCell()
         //deleteAllRecords()
-        //fetchData()
-        saveData()
+        fetchData()
+        //saveData()
     }
     
     func registerTableViewCell() {
@@ -86,6 +62,7 @@ class ViewController: UIViewController {
     }
 
     func fetchData() {
+        
         do {
             users = try context.fetch(Users.fetchRequest())
 
@@ -100,7 +77,7 @@ class ViewController: UIViewController {
     
     func saveData() {
         var recordID = 0
-        if let lastRecordID = fetchedResultsController?.fetchedObjects?.first?.id {
+        if let lastRecordID = fetchedResultsController.fetchedObjects?.first?.id {
             recordID = Int(lastRecordID) + 1
         }
         
@@ -154,16 +131,17 @@ extension ViewController: UITableViewDataSource {
         var cell:UITableViewCell?
         
         let userCell = tableView.dequeueReusableCell(withIdentifier: String(describing: UserTableViewCell.self), for: indexPath) as! UserTableViewCell
-        
+        userCell.delegate = self
+
         let user = users[indexPath.row]
         print(user.id)
         if let userName = user.name {
             userCell.userNameLbl.text = userName
         }
+        userCell.addBtn.tag = Int(user.id)
+        userCell.familyCountBtn.tag = Int(user.id)
+        userCell.familyCountBtn.setTitle(String(describing: user.family?.count ?? 0), for: .normal)
         
-        userCell.addBtn.tag = indexPath.row
-        userCell.familyCountBtn.tag = indexPath.row
-        userCell.delegate = self
         cell = userCell
         
         cell?.selectionStyle = .none
@@ -180,8 +158,9 @@ extension ViewController: UITableViewDelegate {
 //MARK:- UserTableDelegate
 
 extension ViewController: UserTableDelegate {
-    func cellBtnAction(for isFamily: Bool, at index: Int) {
-        if isFamily {
+    func cellBtnAction(for family: Bool, of id: Int) {
+        print(id)
+        if family {
             
         }else {
             
