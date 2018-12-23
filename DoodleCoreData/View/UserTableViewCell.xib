@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Courier.ttc">
+            <string>Courier</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserTableViewCell" rowHeight="50" id="KGk-i7-Jjw" customClass="UserTableViewCell" customModule="DoodleCoreData" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t5c-ke-KBc">
+                        <rect key="frame" x="8" y="17" width="216" height="17"/>
+                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mj-E2-z2p">
+                        <rect key="frame" x="282" y="10" width="30" height="30"/>
+                        <state key="normal" title="Add">
+                            <color key="titleColor" red="0.13175148938205916" green="0.48532626295336789" blue="0.12332201955493788" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="0.1317514894" green="0.48532626299999998" blue="0.1233220196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="addAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="bYZ-Tz-e6B"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TbT-8m-DBV">
+                        <rect key="frame" x="244" y="10" width="30" height="30"/>
+                        <state key="normal" title="100">
+                            <color key="titleColor" red="1" green="0.10428723081656466" blue="0.2490907817537017" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="1" green="0.10428723080000001" blue="0.24909078179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="familyAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="wNi-dc-QAc"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="6mj-E2-z2p" secondAttribute="trailing" id="3nC-0n-GwY"/>
+                    <constraint firstItem="t5c-ke-KBc" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="95o-li-10F"/>
+                    <constraint firstItem="6mj-E2-z2p" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="HWo-jV-rFM"/>
+                    <constraint firstItem="TbT-8m-DBV" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="I2H-cI-CrZ"/>
+                    <constraint firstItem="6mj-E2-z2p" firstAttribute="leading" secondItem="TbT-8m-DBV" secondAttribute="trailing" constant="8" id="IsD-1B-4GW"/>
+                    <constraint firstItem="t5c-ke-KBc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="UqG-ln-Y3c"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="t5c-ke-KBc" secondAttribute="trailing" constant="88" id="XlZ-QO-WRy"/>
+                    <constraint firstItem="TbT-8m-DBV" firstAttribute="leading" secondItem="t5c-ke-KBc" secondAttribute="trailing" constant="20" id="yfU-Th-ane"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="addBtn" destination="6mj-E2-z2p" id="Uno-bM-xSq"/>
+                <outlet property="familyCountBtn" destination="TbT-8m-DBV" id="BmB-M9-k2z"/>
+                <outlet property="userNameLbl" destination="t5c-ke-KBc" id="t04-Gj-Swg"/>
+            </connections>
+            <point key="canvasLocation" x="36" y="42"/>
+        </tableViewCell>
+    </objects>
+</document>

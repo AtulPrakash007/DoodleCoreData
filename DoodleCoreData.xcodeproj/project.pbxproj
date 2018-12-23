@@ -10,9 +10,12 @@
 		047BAF0121CDF2C500EAE1F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BAF0021CDF2C500EAE1F7 /* AppDelegate.swift */; };
 		047BAF0321CDF2C500EAE1F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BAF0221CDF2C500EAE1F7 /* ViewController.swift */; };
 		047BAF0621CDF2C500EAE1F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047BAF0421CDF2C500EAE1F7 /* Main.storyboard */; };
-		047BAF0921CDF2C600EAE1F7 /* DoodleCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 047BAF0721CDF2C500EAE1F7 /* DoodleCoreData.xcdatamodeld */; };
 		047BAF0B21CDF2C600EAE1F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047BAF0A21CDF2C600EAE1F7 /* Assets.xcassets */; };
 		047BAF0E21CDF2C600EAE1F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047BAF0C21CDF2C600EAE1F7 /* LaunchScreen.storyboard */; };
+		047BAF1C21CE74E200EAE1F7 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BAF1A21CE74E200EAE1F7 /* UserTableViewCell.swift */; };
+		047BAF1D21CE74E200EAE1F7 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047BAF1B21CE74E200EAE1F7 /* UserTableViewCell.xib */; };
+		047BAF2021CE7DCB00EAE1F7 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BAF1F21CE7DCB00EAE1F7 /* RoundButton.swift */; };
+		047BAF2221CE7F8E00EAE1F7 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BAF2121CE7F8E00EAE1F7 /* ViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +23,14 @@
 		047BAF0021CDF2C500EAE1F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		047BAF0221CDF2C500EAE1F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		047BAF0521CDF2C500EAE1F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		047BAF0821CDF2C500EAE1F7 /* DoodleCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DoodleCoreData.xcdatamodel; sourceTree = "<group>"; };
 		047BAF0A21CDF2C600EAE1F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		047BAF0D21CDF2C600EAE1F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		047BAF0F21CDF2C600EAE1F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		047BAF1A21CE74E200EAE1F7 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		047BAF1B21CE74E200EAE1F7 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
+		047BAF1F21CE7DCB00EAE1F7 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		047BAF2121CE7F8E00EAE1F7 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		047BAF2421CF4A5800EAE1F7 /* DoodleCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DoodleCoreData.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +63,35 @@
 		047BAEFF21CDF2C500EAE1F7 /* DoodleCoreData */ = {
 			isa = PBXGroup;
 			children = (
+				047BAF1521CE744E00EAE1F7 /* View */,
 				047BAF0021CDF2C500EAE1F7 /* AppDelegate.swift */,
 				047BAF0221CDF2C500EAE1F7 /* ViewController.swift */,
 				047BAF0421CDF2C500EAE1F7 /* Main.storyboard */,
 				047BAF0A21CDF2C600EAE1F7 /* Assets.xcassets */,
 				047BAF0C21CDF2C600EAE1F7 /* LaunchScreen.storyboard */,
 				047BAF0F21CDF2C600EAE1F7 /* Info.plist */,
-				047BAF0721CDF2C500EAE1F7 /* DoodleCoreData.xcdatamodeld */,
+				047BAF2321CF4A5800EAE1F7 /* DoodleCoreData.xcdatamodeld */,
 			);
 			path = DoodleCoreData;
+			sourceTree = "<group>";
+		};
+		047BAF1521CE744E00EAE1F7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				047BAF1E21CE7DB100EAE1F7 /* UIKit */,
+				047BAF1A21CE74E200EAE1F7 /* UserTableViewCell.swift */,
+				047BAF1B21CE74E200EAE1F7 /* UserTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		047BAF1E21CE7DB100EAE1F7 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				047BAF1F21CE7DCB00EAE1F7 /* RoundButton.swift */,
+				047BAF2121CE7F8E00EAE1F7 /* ViewExtension.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +153,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047BAF1D21CE74E200EAE1F7 /* UserTableViewCell.xib in Resources */,
 				047BAF0E21CDF2C600EAE1F7 /* LaunchScreen.storyboard in Resources */,
 				047BAF0B21CDF2C600EAE1F7 /* Assets.xcassets in Resources */,
 				047BAF0621CDF2C500EAE1F7 /* Main.storyboard in Resources */,
@@ -139,9 +167,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047BAF2221CE7F8E00EAE1F7 /* ViewExtension.swift in Sources */,
+				047BAF1C21CE74E200EAE1F7 /* UserTableViewCell.swift in Sources */,
+				047BAF2021CE7DCB00EAE1F7 /* RoundButton.swift in Sources */,
 				047BAF0321CDF2C500EAE1F7 /* ViewController.swift in Sources */,
 				047BAF0121CDF2C500EAE1F7 /* AppDelegate.swift in Sources */,
-				047BAF0921CDF2C600EAE1F7 /* DoodleCoreData.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,12 +358,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		047BAF0721CDF2C500EAE1F7 /* DoodleCoreData.xcdatamodeld */ = {
+		047BAF2321CF4A5800EAE1F7 /* DoodleCoreData.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				047BAF0821CDF2C500EAE1F7 /* DoodleCoreData.xcdatamodel */,
+				047BAF2421CF4A5800EAE1F7 /* DoodleCoreData.xcdatamodel */,
 			);
-			currentVersion = 047BAF0821CDF2C500EAE1F7 /* DoodleCoreData.xcdatamodel */;
+			currentVersion = 047BAF2421CF4A5800EAE1F7 /* DoodleCoreData.xcdatamodel */;
 			path = DoodleCoreData.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
