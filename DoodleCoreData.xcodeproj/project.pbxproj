@@ -17,6 +17,8 @@
 		047BAF2021CE7DCB00EAE1F7 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BAF1F21CE7DCB00EAE1F7 /* RoundButton.swift */; };
 		047BAF2221CE7F8E00EAE1F7 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BAF2121CE7F8E00EAE1F7 /* ViewExtension.swift */; };
 		047BAF2521CF4AB100EAE1F7 /* DoodleCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 047BAF2321CF4A5800EAE1F7 /* DoodleCoreData.xcdatamodeld */; };
+		047BAF2821CF59E200EAE1F7 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BAF2721CF59E200EAE1F7 /* AddViewController.swift */; };
+		047BAF2C21CF5A5F00EAE1F7 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BAF2B21CF5A5F00EAE1F7 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		047BAF1F21CE7DCB00EAE1F7 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		047BAF2121CE7F8E00EAE1F7 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		047BAF2421CF4A5800EAE1F7 /* DoodleCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DoodleCoreData.xcdatamodel; sourceTree = "<group>"; };
+		047BAF2721CF59E200EAE1F7 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		047BAF2B21CF5A5F00EAE1F7 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 		047BAEFF21CDF2C500EAE1F7 /* DoodleCoreData */ = {
 			isa = PBXGroup;
 			children = (
+				047BAF2A21CF5A5100EAE1F7 /* Helper */,
 				047BAF2621CF596900EAE1F7 /* Controller */,
 				047BAF1521CE744E00EAE1F7 /* View */,
 				047BAF0021CDF2C500EAE1F7 /* AppDelegate.swift */,
@@ -99,8 +104,17 @@
 			isa = PBXGroup;
 			children = (
 				047BAF0221CDF2C500EAE1F7 /* ViewController.swift */,
+				047BAF2721CF59E200EAE1F7 /* AddViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		047BAF2A21CF5A5100EAE1F7 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				047BAF2B21CF5A5F00EAE1F7 /* Constant.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +192,8 @@
 			files = (
 				047BAF2221CE7F8E00EAE1F7 /* ViewExtension.swift in Sources */,
 				047BAF1C21CE74E200EAE1F7 /* UserTableViewCell.swift in Sources */,
+				047BAF2821CF59E200EAE1F7 /* AddViewController.swift in Sources */,
+				047BAF2C21CF5A5F00EAE1F7 /* Constant.swift in Sources */,
 				047BAF2021CE7DCB00EAE1F7 /* RoundButton.swift in Sources */,
 				047BAF0321CDF2C500EAE1F7 /* ViewController.swift in Sources */,
 				047BAF0121CDF2C500EAE1F7 /* AppDelegate.swift in Sources */,
