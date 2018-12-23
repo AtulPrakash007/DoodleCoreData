@@ -72,7 +72,6 @@ class ViewController: UIViewController {
     func fetchData() {
         do {
             users = try context.fetch(Users.fetchRequest())
-
         } catch {
             print("Fetching Failed")
         }
@@ -155,10 +154,10 @@ extension ViewController: UITableViewDataSource {
         if let userName = user.name {
             userCell.userNameLbl.text = userName
         }
-        userCell.addBtn.tag = Int(user.id)
-        userCell.familyCountBtn.tag = Int(user.id)
+        userCell.addBtn.tag = indexPath.row
+        userCell.familyCountBtn.tag = indexPath.row
         userCell.familyCountBtn.setTitle(String(describing: user.family?.count ?? 0), for: .normal)
-        
+
         cell = userCell
         
         cell?.selectionStyle = .none
@@ -178,8 +177,9 @@ extension ViewController: UserTableDelegate {
     func cellBtnAction(for family: Bool, of id: Int) {
         print(id)
         selectdUser = users[id]
+        print(selectdUser.name ?? "Nothing")
         if family {
-//            performSegue(withIdentifier: kFamilySegue, sender: self)
+            performSegue(withIdentifier: kFamilySegue, sender: self)
         }else {
             performSegue(withIdentifier: kAddSegue, sender: self)
         }

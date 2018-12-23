@@ -15,5 +15,5 @@ let kName = "name"
 let kId = "id"
 
 let kAddSegue = "addSegue"
-let kFamilySegue = "FamilySegue"
+let kFamilySegue = "familySegue"
 

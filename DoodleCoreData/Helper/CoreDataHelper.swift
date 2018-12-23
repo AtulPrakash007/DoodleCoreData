@@ -8,6 +8,7 @@
 
 import Foundation
 import  CoreData
+import UIKit
 
 class CoreDataHelper: NSObject {
     static let shared = CoreDataHelper()
@@ -29,7 +30,6 @@ class CoreDataHelper: NSObject {
         //        fetchRequest.fetchBatchSize = 60
         
         let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.context, sectionNameKeyPath: nil, cacheName: nil)
-        aFetchedResultsController.delegate = self
         
         _fetchedResultsController = aFetchedResultsController
         

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class FamilyViewController: UIViewController {
 
@@ -14,10 +15,14 @@ class FamilyViewController: UIViewController {
     var familyNames: [Families] = []
     let cellReuseIdentifier = "FamilyCell"
     var user: Users!
-    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        for name in user.family! {
+            let a = name as! Families
+            familyNames.append(a)
+        }
         // Do any additional setup after loading the view.
     }
 
@@ -27,8 +32,10 @@ class FamilyViewController: UIViewController {
     }
     
     @IBAction func backAction(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
     
+    //MARK: - Custom Method
 }
 
 // MARK: - UITableViewDataSource
@@ -60,6 +67,13 @@ extension FamilyViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            let family = familyNames[indexPath.row]
+            do {
+                context.delete(family)
+                try context.save()
+            } catch {
+                print("Failed Deleting")
+            }
             familyNames.remove(at: indexPath.row)
             
             tableView.beginUpdates()

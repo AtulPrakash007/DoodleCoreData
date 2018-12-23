@@ -52,7 +52,7 @@ class AddViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(user.name ?? "Nothing")
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
         tableView.tableFooterView = UIView()
     }
@@ -73,7 +73,9 @@ class AddViewController: UIViewController {
     }
     
     @IBAction func saveAction(_ sender: UIButton) {
-        saveFamilyName()
+        if familyName.count != 0 {
+            saveFamilyName()
+        }
         dismissView()
     }
     
@@ -103,6 +105,7 @@ class AddViewController: UIViewController {
             print(recordID)
             family.id = Int32(recordID)
             recordID += 1
+            user.addToFamily(family)
         }
         
         //        (UIApplication.shared.delegate as! AppDelegate).saveContext()
