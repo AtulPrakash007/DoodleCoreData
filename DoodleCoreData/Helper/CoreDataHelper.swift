@@ -12,6 +12,7 @@ import UIKit
 
 class CoreDataHelper: NSObject {
     static let shared = CoreDataHelper()
+    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     var _fetchedResultsController: NSFetchedResultsController<Users>? = nil
