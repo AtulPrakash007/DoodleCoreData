@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     var _fetchedResultsController: NSFetchedResultsController<Users>? = nil
     let nameArr = ["Atul Prakash", "Deepak Kumar", "Vasudevan S", "Malvirajan", "SatheeshKumar K"]
     var users: [Users] = []
+    var selectdUser: Users!
     
     var fetchedResultsController: NSFetchedResultsController<Users>
     {
@@ -46,12 +47,19 @@ class ViewController: UIViewController {
         return _fetchedResultsController!
     }
     
+    //MARK:- View Life
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         registerTableViewCell()
         //deleteAllRecords()
         fetchData()
         //saveData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        fetchData()
+        tableView.reloadData()
     }
     
     func registerTableViewCell() {
@@ -62,7 +70,6 @@ class ViewController: UIViewController {
     }
 
     func fetchData() {
-        
         do {
             users = try context.fetch(Users.fetchRequest())
 
@@ -118,6 +125,16 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == kAddSegue {
+            let addVC = segue.destination as! AddViewController
+            addVC.user = selectdUser
+        }else if segue.identifier == kFamilySegue {
+            let familyVC = segue.destination as! FamilyViewController
+            familyVC.user = selectdUser
+        }
+    }
 }
 
 //MARK:- UITableViewDataSource
@@ -160,10 +177,11 @@ extension ViewController: UITableViewDelegate {
 extension ViewController: UserTableDelegate {
     func cellBtnAction(for family: Bool, of id: Int) {
         print(id)
+        selectdUser = users[id]
         if family {
-            
+//            performSegue(withIdentifier: kFamilySegue, sender: self)
         }else {
-            performse
+            performSegue(withIdentifier: kAddSegue, sender: self)
         }
     }
 }

@@ -19,6 +19,8 @@
 		047BAF2521CF4AB100EAE1F7 /* DoodleCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 047BAF2321CF4A5800EAE1F7 /* DoodleCoreData.xcdatamodeld */; };
 		047BAF2821CF59E200EAE1F7 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BAF2721CF59E200EAE1F7 /* AddViewController.swift */; };
 		047BAF2C21CF5A5F00EAE1F7 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BAF2B21CF5A5F00EAE1F7 /* Constant.swift */; };
+		047BAF2E21CF65CD00EAE1F7 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BAF2D21CF65CD00EAE1F7 /* CoreDataHelper.swift */; };
+		047BAF3021CF676F00EAE1F7 /* FamilyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BAF2F21CF676F00EAE1F7 /* FamilyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		047BAF2421CF4A5800EAE1F7 /* DoodleCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DoodleCoreData.xcdatamodel; sourceTree = "<group>"; };
 		047BAF2721CF59E200EAE1F7 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		047BAF2B21CF5A5F00EAE1F7 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		047BAF2D21CF65CD00EAE1F7 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		047BAF2F21CF676F00EAE1F7 /* FamilyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 			children = (
 				047BAF0221CDF2C500EAE1F7 /* ViewController.swift */,
 				047BAF2721CF59E200EAE1F7 /* AddViewController.swift */,
+				047BAF2F21CF676F00EAE1F7 /* FamilyViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				047BAF2B21CF5A5F00EAE1F7 /* Constant.swift */,
+				047BAF2D21CF65CD00EAE1F7 /* CoreDataHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -194,8 +200,10 @@
 				047BAF1C21CE74E200EAE1F7 /* UserTableViewCell.swift in Sources */,
 				047BAF2821CF59E200EAE1F7 /* AddViewController.swift in Sources */,
 				047BAF2C21CF5A5F00EAE1F7 /* Constant.swift in Sources */,
+				047BAF3021CF676F00EAE1F7 /* FamilyViewController.swift in Sources */,
 				047BAF2021CE7DCB00EAE1F7 /* RoundButton.swift in Sources */,
 				047BAF0321CDF2C500EAE1F7 /* ViewController.swift in Sources */,
+				047BAF2E21CF65CD00EAE1F7 /* CoreDataHelper.swift in Sources */,
 				047BAF0121CDF2C500EAE1F7 /* AppDelegate.swift in Sources */,
 				047BAF2521CF4AB100EAE1F7 /* DoodleCoreData.xcdatamodeld in Sources */,
 			);

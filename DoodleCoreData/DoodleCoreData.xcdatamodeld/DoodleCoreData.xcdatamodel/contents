@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13240" systemVersion="" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Families" representedClassName="Families" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Users" inverseName="family" inverseEntity="Users" syncable="YES"/>
     </entity>
@@ -11,6 +12,6 @@
     </entity>
     <elements>
         <element name="Users" positionX="-288" positionY="-72" width="128" height="88"/>
-        <element name="Families" positionX="-54" positionY="-9" width="128" height="75"/>
+        <element name="Families" positionX="-54" positionY="-9" width="128" height="88"/>
     </elements>
 </model>
